@@ -1,36 +1,37 @@
-# TypeScript Example
+# Invight Mobile App & Web
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/invight/invight-app)
 
-```sh
-npx create-react-native-app -t with-typescript
+---
+
+## 🚀 Getting Started
+
+ - Install `eslint`, `prettier` and `editor config` plugins into your IDE
+ - Ensure your machine has the Expo CLI Installed (`npm install -g expo-cli`)
+
+```bash
+# Install dependencies
+npm ci
+
+# Start the App
+# - The Expo CLI will provide options to open in [web, android or iOS]
+npm start
 ```
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+---
 
-## 🚀 How to use
+## 🔧 Tools
 
-#### Creating a new project
-
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
-
-### Adding TypeScript to existing projects
-
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `expo start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
-
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
-
-## 📝 Notes
-
-- [Expo TypeScript guide](https://docs.expo.io/versions/latest/guides/typescript/)
+- __[Expo](https://expo.io/)__ - The fastest way to build an app
+- __Flux architecture__
+  - [Redux](https://redux.js.org/docs/introduction/)
+  - Redux Wrapper: [Rematch](https://github.com/rematch/rematch)
+- __Routing and navigation__
+  - [React Navigation](https://reactnavigation.org/)
+- __Data Caching / Offline__
+  - [Redux Persist](https://github.com/rt2zz/redux-persist)
+- __UI Toolkit/s__
+  - [Native Base](https://nativebase.io/)
+- __Code Linting__
+  - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+---
