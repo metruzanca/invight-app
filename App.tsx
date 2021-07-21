@@ -1,19 +1,10 @@
+// import { registerRootComponent } from 'expo';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Main } from './src/Main';
+import configureStore from './src/store';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
-}
+const { persistor, store } = configureStore();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default () => <Main store={store} persistor={persistor} />;
+// IDK if this is necessary
+// registerRootComponent(App);
