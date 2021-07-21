@@ -5,7 +5,8 @@ import { Store } from 'redux';
 import { Provider } from 'react-redux';
 import { Persistor } from "redux-persist"
 import { PersistGate } from 'redux-persist/integration/react';
-import { useLoadFonts } from "./hooks";
+
+import { useLoadFonts } from "@hooks/index";
 
 type Props = {
   store: Store

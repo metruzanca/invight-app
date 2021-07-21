@@ -1,7 +1,7 @@
 // import { registerRootComponent } from 'expo';
 import React from 'react';
 import { Main } from './src/Main';
-import configureStore from './src/store';
+import configureStore from '@store/index';
 
 const { persistor, store } = configureStore();
 

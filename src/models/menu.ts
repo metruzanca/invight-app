@@ -1,6 +1,6 @@
 import { createModel } from "@rematch/core";
-import { RootModel } from ".";
-import { initialState, Menu } from "../store/menu";
+import { RootModel } from "./index";
+import { initialState, Menu } from "@store/menu";
 
 
 export const menu = createModel<RootModel>()({

@@ -2,7 +2,8 @@ import { init, RematchDispatch, RematchRootState } from '@rematch/core';
 import persistPlugin, { getPersistor } from '@rematch/persist';
 import loadingPlugin from '@rematch/loading';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { RootModel, models } from '../models';
+
+import { RootModel, models } from '@models/index';
 
 // Plugins
 const persistConfig ={
