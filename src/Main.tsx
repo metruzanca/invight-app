@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { ActivityIndicator, Text, View } from "react-native";
+import { ActivityIndicator, View } from "react-native";
+import { NativeBaseProvider, Box } from 'native-base';
 
 import { Store } from 'redux';
 import { Provider } from 'react-redux';
@@ -7,6 +8,8 @@ import { Persistor } from "redux-persist"
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { useLoadFonts } from "@hooks/index";
+import { FormattedMessage } from "react-intl";
+import { LangProvider } from "./lang/LangProvider";
 
 type Props = {
   store: Store
@@ -39,9 +42,11 @@ export const Main: React.FC<Props> = ({
   ) : (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-          <View>
-            <Text>Open up App.tsx to start working on your app!</Text>
-          </View>
+        <LangProvider>
+          <NativeBaseProvider>
+            <Box><FormattedMessage id={'app.hello-world'}/></Box>
+          </NativeBaseProvider>
+        </LangProvider>
       </PersistGate>
     </Provider>
   );
