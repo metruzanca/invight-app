@@ -10,6 +10,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { useLoadFonts } from "@hooks/index";
 import { FormattedMessage } from "react-intl";
 import { LangProvider } from "./lang/LangProvider";
+import { Routes } from "./routes";
 
 type Props = {
   store: Store
@@ -44,7 +45,7 @@ export const Main: React.FC<Props> = ({
       <PersistGate persistor={persistor}>
         <LangProvider>
           <NativeBaseProvider>
-            <Box><FormattedMessage id={'app.hello-world'}/></Box>
+            <Routes />
           </NativeBaseProvider>
         </LangProvider>
       </PersistGate>
