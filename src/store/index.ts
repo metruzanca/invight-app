@@ -4,6 +4,10 @@ import loadingPlugin from '@rematch/loading';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { RootModel, models } from '@models/index';
+import {
+  useDispatch as reduxUseDispatch,
+  useSelector as reduxUseSelector,
+} from 'react-redux';
 
 // Plugins
 const persistConfig ={
@@ -30,9 +34,8 @@ const configureStore = () => {
   });
 
   const persistor = getPersistor();
-  const { dispatch } = store;
 
-  return { persistor, store, dispatch };
+  return { persistor, store };
 };
 
 
@@ -40,3 +43,9 @@ export default configureStore;
 
 export type Dispatch = RematchDispatch<RootModel>;
 export type RootState = RematchRootState<RootModel>;
+
+export const useDispatch = () => reduxUseDispatch<Dispatch>();
+
+export const useSelector = <TSelected = unknown>(
+  selector: (state: RootState) => TSelected
+) => reduxUseSelector<RootState, TSelected>(selector);

@@ -1,5 +1,5 @@
-export const initialState = {
+import { Menu as MenuType } from '@lib/index'
 
-}
+export const initialState = { } as MenuType
 
-export type Menu = typeof initialState
+export type Menu = MenuType

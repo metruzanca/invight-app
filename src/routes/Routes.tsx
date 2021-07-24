@@ -2,14 +2,22 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 // import AppConfig from '../constants/config';
-import { AuthStack } from './AuthStack';
-import { Login, Register } from '@screens/index';
+import { MenuStack } from './index';
+import { Menu, Venue } from '@screens/index';
 
 export const Routes:React.FC = () => (
   <NavigationContainer>
-    <AuthStack.Navigator>
-      <AuthStack.Screen name="Login" component={Login} />
-      <AuthStack.Screen name="Register" component={Register} />
-    </AuthStack.Navigator>
+    <MenuStack.Navigator
+      initialRouteName="Menu"
+    >
+      <MenuStack.Screen
+        name="Venue"
+        component={Venue}
+      />
+      <MenuStack.Screen
+        name="Menu"
+        component={Menu}
+      />
+    </MenuStack.Navigator>
   </NavigationContainer>
 );
