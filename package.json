@@ -12,6 +12,7 @@
     "expo": "^42.0.1",
     "expo-font": "^9.2.1",
     "expo-localization": "~10.2.0",
+    "intl": "^1.2.5",
     "native-base": "^3.0.6",
     "react": "16.13.1",
     "react-dom": "^16.13.1",
